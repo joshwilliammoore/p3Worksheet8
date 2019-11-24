@@ -93,5 +93,13 @@ public class SimpleSearchTest {
         Set<MediaItem> result = instance.find(thisSearchTerm, inHere);
         assertEquals(expResult, result);
     }
+    @Test
+    public void testNullInputFind(){
+        
+    }
+    @Test
+    public void testEmptyInputFind() {
+        
+    }
     
 }
