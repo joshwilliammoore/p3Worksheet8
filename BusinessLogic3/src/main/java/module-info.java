@@ -7,6 +7,7 @@
 module BL3 {
         requires mp3agic;
         requires java.logging;
+//        requires org.musicbrainz;
 //        requires coverart;
 //        requires fm.last.musicbrainz.coverart;
 //        requires fm.last.musicbrainz.coverart.impl;
