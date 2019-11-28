@@ -43,7 +43,7 @@ public class SimpleSearchTest {
     /**
      * Test of find method, of class SimpleSearch.
      */
-    @Ignore
+    //@Ignore
     @Test
     public void testFindSameCase() {
         System.out.println("find - same case:");
@@ -56,7 +56,7 @@ public class SimpleSearchTest {
         Set<MediaItem> result = instance.find(thisSearchTerm, inHere);
         assertEquals(expResult, result);
     }
-    @Ignore
+    //@Ignore
     @Test
     public void testFindDifferentCase() {
         System.out.println("find - different case:");
@@ -69,7 +69,7 @@ public class SimpleSearchTest {
         Set<MediaItem> result = instance.find(thisSearchTerm, inHere);
         assertEquals(expResult, result);
     }
-    @Ignore
+    //@Ignore
     @Test
     public void testFindInAlbum() {
         System.out.println("find - album only:");
@@ -81,7 +81,7 @@ public class SimpleSearchTest {
         Set<MediaItem> result = instance.find(thisSearchTerm, inHere);
         assertEquals(expResult, result);
     }
-    @Ignore
+    //@Ignore
     @Test
     public void testFindInTitle() {
         System.out.println("find - title only:");
