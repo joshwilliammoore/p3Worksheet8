@@ -18,17 +18,30 @@ public class SimpleSearch implements SearchService{
     public Set<MediaItem> find(String thisSearchTerm, Set<MediaItem> inhere) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         Set<MediaItem> result = new HashSet<>();
-        for(MediaItem item : inhere){
-            if(item.getArtist().toLowerCase().contains(thisSearchTerm)||
-               item.getAlbum().toLowerCase().contains(thisSearchTerm)||
-               item.getTitle().toLowerCase().contains(thisSearchTerm)){
-                result.add(item);
+        Set<MediaItem> temp = new HashSet<>();
+        try{
+        for(int i=0;i<thisSearchTerm.length();i++){
+            if(thisSearchTerm.charAt(i)==' '){
+                break;
             }
-            if(item.getArtist().contains(thisSearchTerm)||
-               item.getAlbum().contains(thisSearchTerm)||
-               item.getTitle().contains(thisSearchTerm)){
-                result.add(item);
+            for(MediaItem item : inhere){
+                if(item.getArtist().toLowerCase().contains(thisSearchTerm)||
+                    item.getAlbum().toLowerCase().contains(thisSearchTerm)||
+                    item.getTitle().toLowerCase().contains(thisSearchTerm)){
+                    result.add(item);
+                }
+                if(item.getArtist().contains(thisSearchTerm)||
+                    item.getAlbum().contains(thisSearchTerm)||
+                    item.getTitle().contains(thisSearchTerm)){
+                    result.add(item);
+                }
             }
+        }
+        /*if(thisSearchTerm==" "||thisSearchTerm==""){
+            return temp;
+        }*/
+        }catch(NullPointerException e){
+            
         }
         return result;
     }
