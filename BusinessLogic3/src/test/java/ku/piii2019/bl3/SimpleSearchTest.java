@@ -95,11 +95,30 @@ public class SimpleSearchTest {
     }
     @Test
     public void testNullInputFind(){
-        
+        String thisSearchTerm = null;
+        Set<MediaItem> inHere = SearchTestHelper.getStandardSet();
+        SimpleSearch instance = new SimpleSearch();
+        Set<MediaItem> result = instance.find(thisSearchTerm, inHere);
+        Set<MediaItem> expResult = new HashSet<>();
+        assertEquals(expResult, result);
     }
     @Test
     public void testEmptyInputFind() {
-        
+        String thisSearchTerm = "";
+        Set<MediaItem> inHere = SearchTestHelper.getStandardSet();
+        SimpleSearch instance = new SimpleSearch();
+        Set<MediaItem> result = instance.find(thisSearchTerm, inHere);
+        Set<MediaItem> expResult = new HashSet<>();
+        assertEquals(expResult, result);
+    }
+    @Test
+    public void testWhitespaceInputFind() {
+        String thisSearchTerm = "turnip frog";
+        Set<MediaItem> inHere = SearchTestHelper.getStandardSet();
+        SimpleSearch instance = new SimpleSearch();
+        Set<MediaItem> result = instance.find(thisSearchTerm, inHere);
+        Set<MediaItem> expResult = new HashSet<>();
+        assertEquals(expResult, result);
     }
     
 }
