@@ -55,6 +55,19 @@ public class FXMLController implements Initializable {
             + "collection-B";
 
     @FXML
+    private void textInputDialog(ActionEvent event){
+        TextInputDialog dialog = new TextInputDialog();
+        dialog.setTitle("Find");
+        dialog.setHeaderText("Find");
+        dialog.setContentText("Please enter an item to search:");
+        
+        Optional<String> result = dialog.showAndWait();
+        if(result.isPresent()){
+            result.get();
+        }
+    }
+    
+    @FXML
     private void handleButton1Action(ActionEvent event) {
         System.out.println("You clicked me!");
 //        label.setText("Hello World!");
