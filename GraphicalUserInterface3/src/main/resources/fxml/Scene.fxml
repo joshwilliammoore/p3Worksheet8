@@ -59,6 +59,7 @@
                     <MenuItem text="Open Collections A and B" onAction="#openABIn1" />
                     <SeparatorMenuItem  />
                     <MenuItem text="Insert Table 2" onAction="#insertTable2In1" />
+                    <MenuItem text="Open Input Dialog" onAction="#textInputDialog" />
                     <MenuItem text="Exit"/>
                 </items>
             </Menu>
